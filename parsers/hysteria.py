@@ -13,8 +13,8 @@ def parse(data):
         'type': 'hysteria',
         'server': re.sub(r"\[|\]", "", server_info.netloc.rsplit(":", 1)[0]),
         'server_port': int((server_info.netloc.rsplit(":", 1)[1]).split(",", 1)[0]), #fuck all
-        'up_mbps': int(re.search(r'\d+', netquery.get('upmbps', '50')).group()),
-        'down_mbps': int(re.search(r'\d+', netquery.get('downmbps', '100')).group()),
+        'up_mbps': int(re.search(r'\d+', netquery.get('upmbps', '45')).group()),
+        'down_mbps': int(re.search(r'\d+', netquery.get('downmbps', '90')).group()),
         'auth_str': netquery.get('auth', ''),
         'tls': {
             'enabled': True,
